@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyWise | Master Money Skills for Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">
+                MoneyWise
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="#modules" class="text-gray-600 hover:text-indigo-600 transition">Courses</a>
+                <a href="#pricing" class="text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="#founders" class="text-gray-600 hover:text-indigo-600 transition">Founders</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#cta" class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-all duration-300">Get Started</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6 text-gray-700"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About</a>
+             <a href="#modules" class="block py-2 text-gray-600 hover:text-indigo-600">Courses</a>
+             <a href="#pricing" class="block py-2 text-gray-600 hover:text-indigo-600">Pricing</a>
+             <a href="#founders" class="block py-2 text-gray-600 hover:text-indigo-600">Founders</a>
+             <a href="#cta" class="block mt-4 px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-all duration-300 text-center">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight">
+                    Master Money Skills for Life
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    An engaging, interactive financial literacy program that helps students, freshers, and young adults learn how to save, budget, and invest with confidence.
+                </p>
+                <div class="mt-10">
+                    <a href="#cta" class="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-all duration-300 text-lg">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About MoneyWise Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center fade-in">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">About MoneyWise</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">Financial Education, Reimagined.</h2>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            MoneyWise is a learning platform designed to make financial education fun, practical, and interactive. Our goal is simple — empower learners with essential money skills that will benefit them for life.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                            Through games, simulations, and hands-on tools, participants learn how to manage money smartly, develop good habits, and step confidently into adulthood.
+                        </p>
+                    </div>
+                    <div class="fade-in">
+                        <img src="https://stories.freepik.com/storage/18973/revenue-bro.svg" alt="Illustration of financial growth and learning" class="rounded-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">Why Choose Us</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">Why Choose MoneyWise?</h2>
+                    <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">We make learning about money simple, engaging, and highly effective.</p>
+                </div>
+                <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-lucide="wallet"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-800">Affordable for everyone</h3>
+                        <p class="mt-2 text-gray-600">Accessible learning programs at entry-level prices.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in">
+                         <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-800">Practical life skills</h3>
+                        <p class="mt-2 text-gray-600">Real-world lessons in saving, budgeting, banking, and investing.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in">
+                         <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-lucide="gamepad-2"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-800">Interactive learning</h3>
+                        <p class="mt-2 text-gray-600">Gamified budgeting apps, stock market simulations, and quizzes.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 fade-in">
+                         <div class="bg-indigo-100 text-indigo-600 rounded-full h-12 w-12 flex items-center justify-center">
+                           <i data-lucide="rocket"></i>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold text-gray-800">Future-ready</h3>
+                        <p class="mt-2 text-gray-600">Build financial confidence early, preparing for independence and success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Modules Section -->
+        <section id="modules" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center fade-in">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">Our Courses</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">Course Modules</h2>
+                    <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">Our curriculum is designed to cover all the essential aspects of personal finance in a step-by-step manner.</p>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 fade-in">
+                        <h3 class="font-bold text-xl text-gray-800">Budgeting Basics</h3>
+                        <p class="mt-2 text-gray-600">Learn to track expenses and create money plans.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 fade-in">
+                        <h3 class="font-bold text-xl text-gray-800">Smart Saving</h3>
+                        <p class="mt-2 text-gray-600">Build habits that turn small savings into big results.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 fade-in">
+                        <h3 class="font-bold text-xl text-gray-800">Banking Made Easy</h3>
+                        <p class="mt-2 text-gray-600">Understand accounts, digital transactions, and interest.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-200 fade-in">
+                        <h3 class="font-bold text-xl text-gray-800">Investing 101</h3>
+                        <p class="mt-2 text-gray-600">Discover safe ways to grow money through stocks and mutual funds.</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl border border-gray-200 fade-in">
+                        <h3 class="font-bold text-xl text-gray-800">Interactive Games</h3>
+                        <p class="mt-2 text-gray-600">Use budget simulators, quizzes, and mock investment tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Who Is It For? Section -->
+        <section id="for-whom" class="py-20 bg-white">
+             <div class="container mx-auto px-6 fade-in">
+                 <div class="text-center">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">Target Audience</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">Who Is It For?</h2>
+                    <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">A program designed for every stage of a young person's financial journey.</p>
+                </div>
+                <div class="mt-12 max-w-4xl mx-auto">
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-500 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">School students</h4>
+                                <p class="text-gray-600">Build habits of financial discipline early.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-500 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">College students</h4>
+                                <p class="text-gray-600">Prepare for independent living and real-world money decisions.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start space-x-4">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-500 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Freshers</h4>
+                                <p class="text-gray-600">Step into your career with confidence in managing your finances.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start space-x-4">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-500 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">Parents</h4>
+                                <p class="text-gray-600">Give your child the gift of financial awareness.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6 fade-in">
+                <div class="text-center">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">The Process</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">How It Works</h2>
+                    <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">Four simple steps to financial empowerment.</p>
+                </div>
+                <div class="mt-16 relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300" aria-hidden="true"></div>
+                    <div class="relative grid md:grid-cols-4 gap-8">
+                        <div class="text-center p-4">
+                            <div class="bg-indigo-600 text-white rounded-full h-12 w-12 flex items-center justify-center mx-auto text-xl font-bold">1</div>
+                            <h3 class="mt-4 font-semibold text-lg">Sign up online</h3>
+                        </div>
+                        <div class="text-center p-4">
+                             <div class="bg-indigo-600 text-white rounded-full h-12 w-12 flex items-center justify-center mx-auto text-xl font-bold">2</div>
+                            <h3 class="mt-4 font-semibold text-lg">Access lessons</h3>
+                        </div>
+                        <div class="text-center p-4">
+                             <div class="bg-indigo-600 text-white rounded-full h-12 w-12 flex items-center justify-center mx-auto text-xl font-bold">3</div>
+                            <h3 class="mt-4 font-semibold text-lg">Practice with tools</h3>
+                        </div>
+                        <div class="text-center p-4">
+                             <div class="bg-indigo-600 text-white rounded-full h-12 w-12 flex items-center justify-center mx-auto text-xl font-bold">4</div>
+                            <h3 class="mt-4 font-semibold text-lg">Earn a certificate</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Founding Members Section -->
+        <section id="founders" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">Our Team</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">Our Founding Members</h2>
+                    <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">The passionate team dedicated to spreading financial literacy.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto">
+                    <div class="text-center fade-in">
+                        <img src="founders/1.jpg" alt="Founding Member 1" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg">
+                        <h4 class="mt-4 font-semibold text-gray-800">Founder Name</h4>
+                    </div>
+                     <div class="text-center fade-in">
+                        <img src="founders/2.jpg" alt="Founding Member 2" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg">
+                        <h4 class="mt-4 font-semibold text-gray-800">Founder Name</h4>
+                    </div>
+                     <div class="text-center fade-in">
+                        <img src="founders/3.jpg" alt="Founding Member 3" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg">
+                        <h4 class="mt-4 font-semibold text-gray-800">Founder Name</h4>
+                    </div>
+                     <div class="text-center fade-in">
+                        <img src="founders/4.jpg" alt="Founding Member 4" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg">
+                        <h4 class="mt-4 font-semibold text-gray-800">Founder Name</h4>
+                    </div>
+                     <div class="text-center fade-in">
+                        <img src="founders/5.jpg" alt="Founding Member 5" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg">
+                        <h4 class="mt-4 font-semibold text-gray-800">Founder Name</h4>
+                    </div>
+                     <div class="text-center fade-in">
+                        <img src="founders/6.jpg" alt="Founding Member 6" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg">
+                        <h4 class="mt-4 font-semibold text-gray-800">Founder Name</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Plans Section -->
+        <section id="pricing" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center fade-in">
+                    <h3 class="text-lg font-semibold tracking-wider text-indigo-600 uppercase">Our Plans</h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 text-center mt-2">Pricing Plans</h2>
+                    <p class="mt-4 text-lg text-gray-600 text-center max-w-3xl mx-auto">Choose the plan that's right for you. Simple, transparent pricing.</p>
+                </div>
+                <div class="mt-16 grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Pricing Plan 1 -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-indigo-500 fade-in">
+                        <h3 class="text-xl font-semibold text-gray-800">Introductory Session</h3>
+                        <p class="mt-2 text-gray-500">1-day program</p>
+                        <p class="mt-6 text-5xl font-bold text-gray-900">₹999</p>
+                        <a href="#" class="mt-8 block w-full px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-all duration-300 text-center">Enroll Now</a>
+                    </div>
+                     <!-- Pricing Plan 2 -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-indigo-500 fade-in">
+                        <h3 class="text-xl font-semibold text-gray-800">Advanced Program</h3>
+                        <p class="mt-2 text-gray-500">3-day program</p>
+                        <p class="mt-6 text-5xl font-bold text-gray-900">₹1,499</p>
+                         <a href="#" class="mt-8 block w-full px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 transition-all duration-300 text-center">Enroll Now</a>
+                    </div>
+                </div>
+                <p class="mt-12 text-center text-gray-600 fade-in">Special packages available for schools, colleges, and institutions.</p>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="cta" class="py-20 bg-indigo-700">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold text-white">
+                    Take control of your money journey today.
+                </h2>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                     <a href="#" class="px-8 py-3 bg-white text-indigo-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-all duration-300">Enroll Now</a>
+                     <a href="#" class="px-8 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition-all duration-300">Request a Free Demo</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                 <p class="text-gray-400">&copy; 2025 MoneyWise | All rights reserved</p>
+                 <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white px-2">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white px-2">Terms & Conditions</a>
+                    <a href="#" class="text-gray-400 hover:text-white px-2">Contact Us</a>
+                 </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Header Shadow
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Fade-in animations on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+    </script>
+</body>
+</html>
+
+
