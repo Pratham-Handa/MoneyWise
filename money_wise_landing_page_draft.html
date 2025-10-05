@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Questo — Master Money Skills for Life</title>
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Tailwind-like keyframes and utilities */
+    @keyframes floatUp {
+      0% { transform: translateY(8px); opacity: .75 }
+      50% { transform: translateY(-6px); opacity: 1 }
+      100% { transform: translateY(8px); opacity: .9 }
+    }
+    .animate-float {
+      animation: floatUp 4s ease-in-out infinite;
+    }
+    .glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(6px); }
+    /* subtle focus ring for accessibility */
+    .focus-ring:focus { box-shadow: 0 0 0 4px rgba(99,102,241,0.12); outline: none }
+  </style>
+</head>
+<body class="min-h-screen text-slate-100 font-inter" style="background: linear-gradient(180deg,#02102b 0%, #08254a 50%, #05213e 100%);">
+
+  <!-- Page container -->
+  <div class="max-w-7xl mx-auto px-6 py-5">
+
+    <!-- NAV -->
+  <!-- NAV -->
+<header class="flex items-center justify-between py-2 md:py-1">
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 shrink-0">
+        <img src="founders/logo.jpg" alt="MoneyWise Logo" class="h-10 w-auto md:h-12 object-contain rounded-lg" onerror="this.style.display='none'"/>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-6 text-slate-200">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#modules" class="hover:underline">Modules</a>
+        <a href="#pricing" class="hover:underline">Pricing</a>
+        <a href="#founders" class="hover:underline">Founders</a>
+        <button id="demoBtn" class="ml-4 bg-transparent border border-indigo-400/40 px-4 py-2 rounded-lg hover:scale-105 transition-transform focus-ring">Request a demo</button>
+        <button id="getStarted" class="ml-2 bg-gradient-to-r from-indigo-500 to-emerald-400 text-slate-900 font-semibold px-4 py-2 rounded-lg shadow-lg hover:brightness-110 transform transition">Get Started Today</button>
+      </nav>
+
+      <!-- MOBILE MENU BUTTON -->
+      <div class="md:hidden">
+        <button id="mobileToggle" class="p-2 rounded-md glass focus-ring">
+          <svg width="22" height="22" viewBox="0 0 24 24" class="text-white opacity-90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+
+
+<!-- HERO SECTION -->
+<section class="relative w-full h-screen flex items-center max-w-6xl mx-auto px-4 md:px-8">
+  
+  <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+
+    <!-- LEFT COLUMN -->
+    <div class="space-y-6 max-w-2xl mx-auto md:mx-0">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Empowering Everyone with Financial Knowledge
+      </h1>
+      <p class="text-slate-300 leading-relaxed">
+        An engaging, interactive financial literacy program that helps students, freshers, and young adults learn how to save, budget, and invest with confidence.
+      </p>
+
+      <!-- CTA BUTTONS -->
+      <div class="flex flex-wrap gap-4 items-center mt-4">
+        <button class="bg-gradient-to-r from-indigo-500 to-emerald-400 text-slate-900 px-6 py-3 rounded-full font-semibold shadow-xl hover:scale-105 transition-transform">
+          Get Started Today
+        </button>
+        <button class="px-6 py-3 rounded-full border border-slate-600 glass hover:-translate-y-1 transition-transform">
+          Request a Free Demo
+        </button>
+      </div>
+
+      <!-- FEATURE GRID -->
+      <div class="mt-6 grid grid-cols-2 gap-3 max-w-sm text-sm">
+        <div class="p-3 glass rounded-lg flex items-start gap-3 hover:-translate-y-1 transition-transform">
+          <div class="w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center">🧩</div>
+          <div>
+            <div class="font-medium">Affordable</div>
+            <div class="text-slate-300 text-xs">Entry-level pricing</div>
+          </div>
+        </div>
+        <div class="p-3 glass rounded-lg flex items-start gap-3 hover:-translate-y-1 transition-transform">
+          <div class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center">💡</div>
+          <div>
+            <div class="font-medium">Interactive</div>
+            <div class="text-slate-300 text-xs">Gamified lessons & simulators</div>
+          </div>
+        </div>
+        <div class="p-3 glass rounded-lg flex items-start gap-3 hover:-translate-y-1 transition-transform">
+          <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center">📈</div>
+          <div>
+            <div class="font-medium">Practical</div>
+            <div class="text-slate-300 text-xs">Real-world money skills</div>
+          </div>
+        </div>
+        <div class="p-3 glass rounded-lg flex items-start gap-3 hover:-translate-y-1 transition-transform">
+          <div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center">🎓</div>
+          <div>
+            <div class="font-medium">Certified</div>
+            <div class="text-slate-300 text-xs">Earn a completion certificate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="relative flex justify-center md:justify-end mx-auto md:mx-0">
+
+      <!-- Floating Illustration -->
+      <div class="absolute -right-8 -top-12 w-40 h-40 rounded-2xl glass p-3 animate-float hidden md:block">
+        <img src="https://undraw.co/api/illustrations/finance.svg" alt="illustration" class="w-full h-full object-contain opacity-90" onerror="this.style.display='none'" />
+      </div>
+
+      <!-- Main Image -->
+      <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl glass w-full max-w-md">
+        <img src="founders/Learn.png" alt="students learning" class="w-full h-72 md:h-80 object-cover object-top" />
+        <div class="p-5 bg-gradient-to-t from-slate-900/70 to-transparent">
+          <h3 class="font-semibold text-lg">Learn by Doing</h3>
+          <p class="text-slate-300 text-sm">
+            Budget simulators, quizzes, and mock investment challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT SECTION -->
+<section class="mt-20 max-w-6xl mx-auto bg-gradient-to-r from-slate-900/40 via-slate-800/20 to-transparent p-8 rounded-2xl glass shadow-inner">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+    
+    <!-- LEFT CONTENT -->
+    <div class="md:w-1/2 space-y-4 text-center md:text-left">
+      <h3 class="text-3xl font-bold">About MoneyWise</h3>
+      <p class="text-slate-300 leading-relaxed">
+        MoneyWise is a learning platform designed to make financial education fun, practical, 
+        and interactive. Our goal is simple — empower learners with essential money skills that 
+        will benefit them for life. Through games, simulations, and hands-on tools, participants 
+        learn how to manage money smartly, develop good habits, and step confidently into adulthood.
+      </p>
+
+      <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-medium">
+        <li class="p-3 glass rounded-lg flex items-center gap-2 justify-center md:justify-start">
+          ✅ <span>Affordable for everyone</span>
+        </li>
+        <li class="p-3 glass rounded-lg flex items-center gap-2 justify-center md:justify-start">
+          💡 <span>Practical life skills</span>
+        </li>
+        <li class="p-3 glass rounded-lg flex items-center gap-2 justify-center md:justify-start">
+          🎮 <span>Interactive learning</span>
+        </li>
+        <li class="p-3 glass rounded-lg flex items-center gap-2 justify-center md:justify-start">
+          🚀 <span>Future-ready approach</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="md:w-1/2 flex justify-center md:justify-end">
+      <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl glass w-full max-w-md">
+        <img src="founders/works.png" alt="MoneyWise illustration" class="w-full h-64 md:h-72 object-cover object-top" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- MODULES SECTION -->
+<section id="modules" class="mt-20 max-w-6xl mx-auto px-4 md:px-8">
+  <h3 class="text-3xl md:text-4xl font-bold text-center md:text-left">Course Modules</h3>
+  
+  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <!-- Module 1 --> 
+    <article class="p-6 rounded-2xl glass hover:scale-105 transition-transform shadow-lg flex flex-col">
+      <h4 class="font-semibold text-lg">Budgeting Basics</h4>
+      <p class="text-slate-300 mt-2 text-sm">Learn to track expenses and create money plans.</p>
+    </article>
+
+    <!-- Module 2 -->
+    <article class="p-6 rounded-2xl glass hover:scale-105 transition-transform shadow-lg flex flex-col">
+      <h4 class="font-semibold text-lg">Smart Saving</h4>
+      <p class="text-slate-300 mt-2 text-sm">Build habits that turn small savings into big results.</p>
+    </article>
+
+    <!-- Module 3 -->
+    <article class="p-6 rounded-2xl glass hover:scale-105 transition-transform shadow-lg flex flex-col">
+      <h4 class="font-semibold text-lg">Banking Made Easy</h4>
+      <p class="text-slate-300 mt-2 text-sm">Understand accounts, digital transactions, and interest.</p>
+    </article>
+
+    <!-- Module 4 -->
+    <article class="p-6 rounded-2xl glass hover:scale-105 transition-transform shadow-lg flex flex-col">
+      <h4 class="font-semibold text-lg">Investing</h4>
+      <p class="text-slate-300 mt-2 text-sm">Discover safe ways to grow money through stocks and mutual funds.</p>
+    </article>
+
+    <!-- Module 5 -->
+    <article class="p-6 rounded-2xl glass hover:scale-105 transition-transform shadow-lg flex flex-col">
+      <h4 class="font-semibold text-lg">Interactive Games</h4>
+      <p class="text-slate-300 mt-2 text-sm">Use budget simulators, quizzes, and mock investment tools.</p>
+    </article>
+
+    <!-- Module 6 -->
+    <article class="p-6 rounded-2xl glass hover:scale-105 transition-transform shadow-lg flex flex-col">
+      <h4 class="font-semibold text-lg">Certificate & Rewards</h4>
+      <p class="text-slate-300 mt-2 text-sm">Earn a course certificate and badges on completion.</p>
+    </article>
+  </div>
+</section>
+
+
+<!-- WHO IS IT FOR SECTION -->
+<section id="who" class="mt-20 max-w-6xl mx-auto px-4 md:px-8">
+  <div class="md:flex md:items-start md:gap-12">
+    
+    <!-- LEFT CONTENT -->
+    <div class="md:w-1/2 space-y-4">
+      <h3 class="text-3xl font-bold">Who Is It For?</h3>
+      <div class="mt-4 grid gap-4">
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-500 text-white text-lg">🎓</div>
+          <p class="text-slate-300 flex-1">School students — build habits of financial discipline early.</p>
+        </div>
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-emerald-500 text-white text-lg">📚</div>
+          <p class="text-slate-300 flex-1">College students — prepare for independent living and real-world money decisions.</p>
+        </div>
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg">💼</div>
+          <p class="text-slate-300 flex-1">Freshers — step into your career with confidence in managing your finances.</p>
+        </div>
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-rose-500 text-white text-lg">👨‍👩‍👧</div>
+          <p class="text-slate-300 flex-1">Parents — give your child the gift of financial awareness.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="md:w-1/2 mt-8 md:mt-0 space-y-4">
+      <h4 class="font-semibold text-lg text-center md:text-left">How It Works</h4>
+      <div class="grid gap-4">
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-indigo-500 text-white font-bold text-lg">1</div>
+          <p class="text-slate-300 flex-1">Sign up online.</p>
+        </div>
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-emerald-500 text-white font-bold text-lg">2</div>
+          <p class="text-slate-300 flex-1">Access live and recorded interactive lessons.</p>
+        </div>
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-500 text-white font-bold text-lg">3</div>
+          <p class="text-slate-300 flex-1">Practice using gamified tools and challenges.</p>
+        </div>
+        <div class="p-4 glass rounded-xl flex items-center gap-4 hover:-translate-y-1 transition-transform shadow">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-rose-500 text-white font-bold text-lg">4</div>
+          <p class="text-slate-300 flex-1">Earn a course certificate on completion.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+    <!-- PRICING SECTION -->
+<section id="pricing" class="mt-20 max-w-6xl mx-auto px-4 md:px-8">
+  <h3 class="text-3xl font-bold text-center md:text-left">Pricing Plans</h3>
+
+  <div class="mt-8 grid gap-6 md:grid-cols-3">
+
+    <!-- Introductory Session -->
+    <div class="p-6 rounded-2xl glass border border-white/10 shadow hover:-translate-y-2 transition-transform flex flex-col justify-between">
+      <div class="space-y-2">
+        <h4 class="font-semibold text-lg">Introductory Program</h4>
+        <p class="text-slate-300 text-sm">1-day program</p>
+      </div>
+      <div class="mt-4 text-3xl font-bold">₹999</div>
+      <button class="mt-6 w-full py-2 rounded-full focus-ring bg-indigo-600 text-white hover:scale-105 transition-transform">Enroll Now</button>
+    </div>
+
+    <!-- Advanced Program -->
+    <div class="p-6 rounded-2xl glass border-2 border-indigo-500 shadow-2xl transform scale-105 hover:-translate-y-2 transition-transform flex flex-col justify-between">
+      <div class="space-y-2">
+        <span class="inline-block px-2 py-1 bg-indigo-500 rounded-full text-sm font-medium text-white">Best Value</span>
+        <h4 class="font-semibold text-lg mt-2">Advanced Program</h4>
+        <p class="text-slate-300 text-sm">3-day program</p>
+      </div>
+      <div class="mt-4 text-3xl font-bold">₹1,499</div>
+      <button class="mt-6 w-full py-2 rounded-full focus-ring bg-emerald-400 text-slate-900 hover:scale-105 transition-transform">Enroll Now</button>
+    </div>
+
+    <!-- Special Packages -->
+    <div class="p-6 rounded-2xl glass border border-white/10 shadow hover:-translate-y-2 transition-transform flex flex-col justify-between">
+      <div class="space-y-2">
+        <h4 class="font-semibold text-lg">Special Packages</h4>
+        <p class="text-slate-300 text-sm">School, college & institutional pricing</p>
+      </div>
+      <button onclick="openContact()" class="mt-6 w-full py-2 rounded-full focus-ring border border-slate-600 glass hover:-translate-y-1 transition-transform">Request a Quote</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOUNDERS SECTION -->
+<section id="founders" class="mt-20 max-w-6xl mx-auto px-4 md:px-8">
+  <h3 class="text-3xl font-bold text-center md:text-left">Our Founders</h3>
+  <p class="text-slate-300 mt-2 text-center md:text-left">Meet the team behind MoneyWise</p>
+
+  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Founder Card -->
+    <div class="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="w-full aspect-[4/3]">
+        <img src="founders/1.jpg" alt="Dhairya Raichada" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <div>
+          <div class="font-semibold">Dhairya Raichada</div>
+          <div class="text-sm text-slate-300">Founder, CEO</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="w-full aspect-[4/3]">
+        <img src="founders/2.jpg" alt="Komal Kothari" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <div>
+          <div class="font-semibold">Komal Kothari</div>
+          <div class="text-sm text-slate-300">Director</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="w-full aspect-[4/3]">
+        <img src="founders/3.jpg" alt="Akanksha Mali" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <div>
+          <div class="font-semibold">Akanksha Mali</div>
+          <div class="text-sm text-slate-300">Director</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="w-full aspect-[4/3]">
+        <img src="founders/4.jpg" alt="Swayam Jain" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <div>
+          <div class="font-semibold">Swayam Jain</div>
+          <div class="text-sm text-slate-300">Director</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="w-full aspect-[4/3]">
+        <img src="founders/5.jpg" alt="Dhruv Khandelwal" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <div>
+          <div class="font-semibold">Dhruv Khandelwal</div>
+          <div class="text-sm text-slate-300">Co-founder</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+      <div class="w-full aspect-[4/3]">
+        <img src="founders/6.jpg" alt="Utsavi Shah" class="w-full h-full object-cover"/>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+        <div>
+          <div class="font-semibold">Utsavi Shah</div>
+          <div class="text-sm text-slate-300">Co-founder</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- FINAL CTA -->
+    <section class="mt-12 p-8 rounded-2xl glass flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-2xl font-bold">Take control of your money journey today.</h3>
+        <p class="text-slate-300 mt-1">Practical, fun, and affordable financial education for young learners.</p>
+      </div>
+      <div class="flex gap-4">
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-emerald-400 text-slate-900 font-semibold shadow-lg hover:scale-105 transition">Enroll Now</button>
+        <button class="px-6 py-3 rounded-full border border-slate-600 glass focus-ring">Request a Free Demo</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-12 py-8 text-sm text-slate-400 flex flex-col md:flex-row justify-between items-center">
+      <div>© 2025 Questo | All rights reserved</div>
+    </footer>
+
+  </div>
+
+  <!-- Modals and scripts -->
+  <div id="modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-slate-900 rounded-xl p-6 w-11/12 max-w-xl glass shadow-lg">
+      <button id="closeModal" class="float-right p-2 -mt-2 -mr-2 rounded-full focus-ring">✕</button>
+      <h4 class="text-xl font-semibold">Request a Free Demo</h4>
+      <p class="text-slate-300 mt-2">Leave your email and we'll reach out with a demo link.</p>
+      <form id="demoForm" class="mt-4 grid gap-3">
+        <input required type="text" name="name" placeholder="Your name" class="p-3 rounded-md bg-transparent border border-white/6 focus-ring" />
+        <input required type="email" name="email" placeholder="Email" class="p-3 rounded-md bg-transparent border border-white/6 focus-ring" />
+        <div class="flex gap-2">
+          <button type="submit" class="px-4 py-2 rounded-full bg-indigo-600">Send Request</button>
+          <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-full border border-white/6 glass">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle (simple)
+    const mobileToggle = document.getElementById('mobileToggle');
+    mobileToggle?.addEventListener('click', ()=>{
+      alert('Mobile menu — expand as needed (demo)')
+    })
+
+    // Modal
+    const modal = document.getElementById('modal');
+    const demoBtn = document.getElementById('demoBtn');
+    const ctaDemo = document.getElementById('ctaDemo');
+    const closeBtn = document.getElementById('closeModal');
+    const getStarted = document.getElementById('getStarted');
+    const ctaPrimary = document.getElementById('ctaPrimary');
+
+    function openModal(){ modal.classList.remove('hidden'); modal.classList.add('flex'); }
+    function closeModal(){ modal.classList.remove('flex'); modal.classList.add('hidden'); }
+
+    demoBtn?.addEventListener('click', openModal);
+    ctaDemo?.addEventListener('click', openModal);
+    closeBtn?.addEventListener('click', closeModal);
+
+    document.getElementById('demoForm')?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const form = new FormData(e.target);
+      // demo only — in real app send to backend
+      closeModal();
+      alert('Thanks, ' + form.get('name') + '! We\'ll send a demo to ' + form.get('email'));
+    })
+
+    // CTA primary action
+    function fakeEnroll(){
+      ctaPrimary.innerText = 'Opening enrolment...';
+      setTimeout(()=>{ ctaPrimary.innerText = 'Get Started Today'; alert('This is a demo build — hook this to your signup flow') }, 600);
+    }
+    ctaPrimary?.addEventListener('click', fakeEnroll);
+    getStarted?.addEventListener('click', fakeEnroll);
+
+    // small helper: open contact
+    function openContact(){ alert('Contact sales at sales@moneywise.example — demo only'); }
+    window.openContact = openContact;
+  </script>
+
+</body>
+</html>
